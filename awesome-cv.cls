@@ -621,22 +621,27 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
+
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
+
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
 
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
+\vspace*{-0.5cm}
+\hspace*{1.5cm}\begin{tabular*}{\textwidth}{L{5cm} L{5cm} L{5cm}}
+
 }{%
-    \end{tabular*}
+
+ \end{tabular*}
 
   \end{center}
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+\newcommand*{\cvskill}[3]{%
+	\skillsetstyle{#1} &\skillsetstyle{#2} &  \skillsetstyle{#3} \\
 }
 
 % Define an environment for cvitems(for cventry)
